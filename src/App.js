@@ -1,5 +1,5 @@
 import {useState} from 'react';
-
+import Card from './card'
 function App() {
   const [events, setEvents] = useState(null);
   const [query, setQuery] = useState("")
@@ -7,24 +7,28 @@ function App() {
   async function getEvents() {
     let message = await fetch("https://jsonplaceholder.typicode.com/photos")
     let jsonMessage = await message.json();
-    console.log(jsonMessage)
+
+    let finalArray = jsonMessage.filter(word => word.title.includes(query));
+    setEvents(finalArray)
+    console.log(finalArray)
+  } 
+
+  function generateEvents() {
+    return events.map((ev) =>{
+      return <Card thumbnailUrl={ev.thumbnailUrl} title={ev.title} id={ev.id} />
+    })
   }
 
   return (
     <div className="App" style={{width: "100vw", height: "100vh", display: "flex", flexDirection: "column",justifyContent: "start", alignItems: 'center'}}>
       <h2>Event Finder</h2>
-      <div class="inputs" style={{width: "20vw", display: 'flex', justifyContent: 'space-between'}}>
-      <input style={{margin: '5vh 0'}}type="text" name="nickname" placeholder="Input" value={query} />
-      <label for="name">Sort By: </label>
-      <select name="Name" id="name">
-        <option value="Category">City</option>
-        <option value="City">Category</option>
-        <option value="Name">Name</option>
-      </select>
-      </div>
+      <input style={{margin: '5vh 0'}}type="text" name="nickname" placeholder="Input" onChange={(e)=> {setQuery(e.target.value)}} />
       <button style={{width: '10vw',margin: '5vh 0'}} onClick={getEvents}>GetEvent</button>
-      {events && <h3>{events}</h3>}
-    onChange={(e)=>{setQuery(e.target.value)}} placeholder="nickname"
+      {events && (
+      <div>
+        <h3>Results are: </h3>
+        {generateEvents()}
+      </div>)}
     </div>
   );
 }
