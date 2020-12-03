@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/examen-final-prog-web-avanzada/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/examen-final-prog-web-avanzada/static/js/main.ffdcd4b3.chunk.js",
+    "main.js.map": "/examen-final-prog-web-avanzada/static/js/main.ffdcd4b3.chunk.js.map",
+    "runtime-main.js": "/examen-final-prog-web-avanzada/static/js/runtime-main.9babc2c9.js",
+    "runtime-main.js.map": "/examen-final-prog-web-avanzada/static/js/runtime-main.9babc2c9.js.map",
+    "static/js/2.a6c49b71.chunk.js": "/examen-final-prog-web-avanzada/static/js/2.a6c49b71.chunk.js",
+    "static/js/2.a6c49b71.chunk.js.map": "/examen-final-prog-web-avanzada/static/js/2.a6c49b71.chunk.js.map",
+    "static/js/3.9bdc820e.chunk.js": "/examen-final-prog-web-avanzada/static/js/3.9bdc820e.chunk.js",
+    "static/js/3.9bdc820e.chunk.js.map": "/examen-final-prog-web-avanzada/static/js/3.9bdc820e.chunk.js.map",
+    "index.html": "/examen-final-prog-web-avanzada/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/examen-final-prog-web-avanzada/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.a6c49b71.chunk.js.LICENSE.txt": "/examen-final-prog-web-avanzada/static/js/2.a6c49b71.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9babc2c9.js",
+    "static/js/2.a6c49b71.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.ffdcd4b3.chunk.js"
+  ]
+}
